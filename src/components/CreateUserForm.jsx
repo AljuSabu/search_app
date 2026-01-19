@@ -22,10 +22,11 @@ const CreateUserForm = ({ newUser, onCancel, editingUser, updateUser }) => {
       alert("Please fill in all fields");
       return;
     }
+
     if (editingUser) {
       updateUser({
         ...editingUser,
-        ...form
+        ...form,
       });
     } else {
       newUser(form);
@@ -37,51 +38,59 @@ const CreateUserForm = ({ newUser, onCancel, editingUser, updateUser }) => {
     <div className="w-full max-h-150 bg-stone-800 rounded-xl">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col text-lg xl:py-10 2xl:py-20 xl:px-20 2xl:px-30"
+        className="flex flex-col lg:text-base xl:text-lg 2xl:text-xl lg:py-10 2xl:py-20 lg:px-20 2xl:px-30"
       >
-        <div className="flex xl:gap-10">
-          <div className="flex flex-auto flex-col xl:mb-10">
-            <label className="font-bold xl:text-xl 2xl:text-2xl xl:mb-5">First Name</label>
+        <div className="flex gap-10">
+          <div className="flex flex-auto flex-col lg:mb-8 xl:mb-10">
+            <label className="font-bold lg:text-lg xl:text-xl 2xl:text-2xl lg:mb-2 xl:mb-5">
+              First Name
+            </label>
             <input
               type="text"
               name="firstName"
               value={form.firstName}
               onChange={handleChange}
-              className="border-b focus:outline-none max-w-130 xl:p-1 2xl:p-2"
+              className="border-b focus:outline-none max-w-130 p-1 2xl:p-2"
               required
             />
           </div>
-          <div className="flex flex-auto flex-col 2xl:mb-10">
-            <label className="font-bold xl:text-xl 2xl:text-2xl xl:mb-5">Last Name</label>
+          <div className="flex flex-auto flex-col lg:mb-8 2xl:mb-10">
+            <label className="font-bold lg:text-lg xl:text-xl 2xl:text-2xl lg:mb-2 xl:mb-5">
+              Last Name
+            </label>
             <input
               type="text"
               name="lastName"
               value={form.lastName}
               onChange={handleChange}
-              className="border-b focus:outline-none max-w-130 xl:p-1 2xl:p-2"
+              className="border-b focus:outline-none max-w-130 p-1 2xl:p-2"
               required
             />
           </div>
         </div>
-        <div className="flex flex-col xl:mb-10">
-          <label className="font-bold xl:text-xl 2xl:text-2xl xl:mb-5">Email</label>
+        <div className="flex flex-col lg:mb-8 xl:mb-10">
+          <label className="font-bold lg:text-lg xl:text-xl 2xl:text-2xl lg:mb-2 xl:mb-5">
+            Email
+          </label>
           <input
             type="text"
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="border-b focus:outline-none xl:w-150 2xl:w-190 xl:p-1 2xl:p-2"
+            className="border-b focus:outline-none lg:w-110 xl:w-150 2xl:w-190 p-1 2xl:p-2"
             required
           />
         </div>
-        <div className="flex flex-col mb-10">
-          <label className="font-bold xl:text-xl 2xl:text-2xl xl:mb-5">Phone</label>
+        <div className="flex flex-col lg:mb-8 mb-10">
+          <label className="font-bold lg:text-lg xl:text-xl 2xl:text-2xl lg:mb-2 xl:mb-5">
+            Phone
+          </label>
           <input
             type="text"
             name="phone"
             value={form.phone}
             onChange={handleChange}
-            className="border-b focus:outline-none xl:w-100 2xl:w-130 xl:p-1 2xl:p-2"
+            className="border-b focus:outline-none lg:w-80 xl:w-100 2xl:w-130 p-1 2xl:p-2"
             required
           />
         </div>
@@ -89,13 +98,13 @@ const CreateUserForm = ({ newUser, onCancel, editingUser, updateUser }) => {
           <button
             type="button"
             onClick={onCancel}
-            className="rounded-md bg-red-600 xl:text-xl xl:w-30 xl:h-10"
+            className=" rounded-md bg-red-600 hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-100 transition-all ease-in-out lg:text-lg xl:text-xl lg:w-25 xl:w-30 lg:h-10"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="rounded-md bg-blue-600 xl:text-xl xl:w-30 xl:h-10"
+            className="rounded-md bg-blue-600 hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-100 transition-all ease-in-out lg:text-lg xl:text-xl lg:w-25 xl:w-30 lg:h-10"
           >
             {editingUser ? "Update" : "Create"}
           </button>
