@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-stone-900 text-white pt-10 md:pt-20 lg:pt-15 xl:pt-20 2xl:pt-30 px-4 md:px-15 lg:px-20 xl:px-30 2xl:px-40">
+      <div className="min-h-screen bg-stone-950 text-white pt-10 md:pt-20 lg:pt-15 xl:pt-20 2xl:pt-30 px-4 md:px-15 lg:px-20 xl:px-30 2xl:px-40">
         <div className="h-max-190 p-5 text-sm md:text-lg lg:text-base xl:text-lg">
           <div className="flex justify-between mb-10 ">
             <input
