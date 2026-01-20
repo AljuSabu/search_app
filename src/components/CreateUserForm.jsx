@@ -35,7 +35,7 @@ const CreateUserForm = ({ newUser, onCancel, editingUser, updateUser }) => {
   };
 
   return (
-    <div className="w-full max-h-150 bg-stone-800 rounded-xl">
+    <div className="w-full max-h-150 bg-stone-800 rounded-xl mb-10">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col lg:text-base xl:text-lg 2xl:text-xl lg:py-10 2xl:py-20 lg:px-20 2xl:px-30"

@@ -3,59 +3,69 @@ export const data = [{
     "firstName": "Mavra",
     "lastName": "Meachan",
     "email": "mmeachan0@sohu.com",
-    "phone": "920-490-7386"
+    "phone": "920-490-7386",
+    "completed": false
   }, {
     "id": 2,
     "firstName": "Jamie",
     "lastName": "Paule",
     "email": "jpaule1@yahoo.co.jp",
-    "phone": "203-999-6063"
+    "phone": "203-999-6063",
+    "completed": false
   }, {
     "id": 3,
     "firstName": "Consolata",
     "lastName": "Klesl",
     "email": "cklesl2@webeden.co.uk",
-    "phone": "539-338-5536"
+    "phone": "539-338-5536",
+    "completed": false
   }, {
     "id": 4,
     "firstName": "Barret",
     "lastName": "Buttwell",
     "email": "bbuttwell3@tinyurl.com",
-    "phone": "203-613-9822"
+    "phone": "203-613-9822",
+    "completed": false
   }, {
     "id": 5,
     "firstName": "Jan",
     "lastName": "Antonio",
     "email": "jantonio4@simplemachines.org",
-    "phone": "106-745-4001"
+    "phone": "106-745-4001",
+    "completed": false
   }, {
     "id": 6,
     "firstName": "Shirl",
     "lastName": "Fowlie",
     "email": "sfowlie5@admin.ch",
-    "phone": "680-436-7655"
+    "phone": "680-436-7655",
+    "completed": false
   }, {
     "id": 7,
     "firstName": "Krishnah",
     "lastName": "Coakley",
     "email": "kcoakley6@army.mil",
-    "phone": "833-288-2798"
+    "phone": "833-288-2798",
+    "completed": false
   }, {
     "id": 8,
     "firstName": "Kathy",
     "lastName": "Onion",
     "email": "konion7@statcounter.com",
-    "phone": "912-394-6632"
+    "phone": "912-394-6632",
+    "completed": false
   }, {
     "id": 9,
     "firstName": "Arvie",
     "lastName": "Sinnock",
     "email": "asinnock8@cocolog-nifty.com",
-    "phone": "522-701-6641"
+    "phone": "522-701-6641",
+    "completed": false
   }, {
     "id": 10,
     "firstName": "Fran",
     "lastName": "Edy",
     "email": "fedy9@nationalgeographic.com",
-    "phone": "517-430-4994"
+    "phone": "517-430-4994",
+    "completed": false
   } ]
