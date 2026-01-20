@@ -56,7 +56,7 @@ search_app/
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/AljuSabu/search_app
    ```
 
 2. Navigate to the project folder:
@@ -120,7 +120,7 @@ http://localhost:5173
 
 ## 🌐 Live Preview
 
-👉 [View Live App](https://your-live-link-here)
+👉 [View Live App](https://al-search-app.netlify.app/)
 
 ---
 
