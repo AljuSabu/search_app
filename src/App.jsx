@@ -64,8 +64,8 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-stone-900 text-white md:pt-20 lg:pt-15 xl:pt-20 2xl:pt-30 md:px-15 lg:px-20 xl:px-30 2xl:px-40">
-        <div className="h-max-190 p-5 md:text-lg lg:text-base xl:text-lg">
+      <div className="min-h-screen bg-stone-900 text-white pt-10 md:pt-20 lg:pt-15 xl:pt-20 2xl:pt-30 px-4 md:px-15 lg:px-20 xl:px-30 2xl:px-40">
+        <div className="h-max-190 p-5 text-sm md:text-lg lg:text-base xl:text-lg">
           <div className="flex justify-between mb-10 ">
             <input
               value={searchTerm}
@@ -73,14 +73,14 @@ function App() {
                 setSearchTerm(e.target.value);
               }}
               type="text"
-              className="bg-stone-700 focus:outline-none rounded-md md:py-3 2xl:py-3 md:px-3 2xl:px-4 md:w-90 lg:w-100 xl:w-120 2xl:w-140 "
+              className="bg-stone-700 focus:outline-none rounded md:rounded-md py-1 md:py-3 2xl:py-3 px-2 md:px-3 2xl:px-4 w-42 md:w-90 lg:w-100 xl:w-120 2xl:w-140 "
               placeholder="Search here ..."
             />
             <button
               onClick={() => {
                 setShowForm(true);
               }}
-              className="bg-sky-600 rounded-md hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-100 transition-all ease-in-out md:px-4 lg:px-3 2xl:px-4 md:py-3 lg:py-2 2xl:py-2"
+              className="bg-sky-600 rounded md:rounded-md hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 hover:shadow-md shadow-black/50 active:scale-95 active:shadow-inner duration-100 transition-all ease-in-out px-2 md:px-4 lg:px-3 2xl:px-4 py-1 md:py-3 lg:py-2 2xl:py-2"
             >
               Create User
             </button>

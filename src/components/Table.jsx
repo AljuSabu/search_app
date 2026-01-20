@@ -73,27 +73,33 @@ const Table = ({ users, searchTerm, onDelete, onEdit, onToggle }) => {
                     >
                       {user.phone}
                     </td>
-                    <td className={`transition-all duration-200 border-b lg:p-1 xl:p-2 2xl:p-3 ${user.completed?"transition-all duration-200 text-gray-400":""}`}>
+                    <td
+                      className={`transition-all duration-200 border-b lg:p-1 xl:p-2 2xl:p-3 ${user.completed ? "transition-all duration-200 text-gray-400" : ""}`}
+                    >
                       <button
                         onClick={() => onToggle(user.id)}
-                        className={`hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-90 duration-100 transition-all ease-in-out lg:mr-2 xl:mr-3 2xl:mr-5 ${user.completed?"transition-all duration-200 text-gray-400":"text-emerald-600 hover:text-emerald-400"}`}
+                        className={`hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-90 duration-100 transition-all ease-in-out lg:mr-2 xl:mr-3 2xl:mr-5 ${user.completed ? "transition-all duration-200 text-gray-400" : "text-emerald-600 hover:text-emerald-400"}`}
                       >
                         <DoneAllIcon className="lg:text-xl! xl:text-2xl!" />
                       </button>
                     </td>
-                    <td className={`transition-all duration-200 border-b lg:p-1 xl:p-2 2xl:p-3 ${user.completed?"transition-all duration-200 text-gray-400":""}`}>
+                    <td
+                      className={`transition-all duration-200 border-b lg:p-1 xl:p-2 2xl:p-3 ${user.completed ? "transition-all duration-200 text-gray-400" : ""}`}
+                    >
                       <button
                         disabled={user.completed}
                         onClick={() => onEdit(user)}
-                        className={`hover: hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-90 duration-100 transition-all ease-in-out lg:mr-2 xl:mr-3 2xl:mr-5 ${user.completed?"transition-all duration-200 text-gray-400":"text-yellow-600 hover:text-yellow-400"}`}
+                        className={`hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-90 duration-100 transition-all ease-in-out lg:mr-2 xl:mr-3 2xl:mr-5 ${user.completed ? "transition-all duration-200 text-gray-400" : "text-yellow-600 hover:text-yellow-400"}`}
                       >
                         <EditIcon className="lg:text-xl! xl:text-2xl!" />
                       </button>
                     </td>
-                    <td className={`transition-all duration-200 border-b lg:p-1 xl:p-2 2xl:p-3 ${user.completed?"transition-all duration-200 text-gray-400":""}`}>
+                    <td
+                      className={`transition-all duration-200 border-b lg:p-1 xl:p-2 2xl:p-3 ${user.completed ? "transition-all duration-200 text-gray-400" : ""}`}
+                    >
                       <button
                         onClick={() => onDelete(user.id)}
-                        className={`hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-90 duration-100 transition-all ease-in-out ${user.completed?"transition-all duration-200 text-gray-400":"text-red-600 hover:text-red-400"}`}
+                        className={`hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-90 duration-100 transition-all ease-in-out ${user.completed ? "transition-all duration-200 text-gray-400" : "text-red-600 hover:text-red-400"}`}
                       >
                         <DeleteIcon className="lg:text-xl! xl:text-2xl!" />
                       </button>
@@ -105,7 +111,53 @@ const Table = ({ users, searchTerm, onDelete, onEdit, onToggle }) => {
           </tbody>
         </table>
       </div>
-      <div className="border lg:hidden"></div>
+      <div className="lg:hidden space-y-4">
+        {filteredUsers.map((user) => (
+          <div
+            key={user.id}
+            className="bg-stone-800 p-3 md:p-4 rounded md:rounded-lg shadow-sm shadow-stone-700"
+          >
+            <div
+              className={`text-base md:text-xl text-orange-500 font-semibold ${user.completed ? "line-through opacity-60" : ""}`}
+            >
+              {user.firstName} {user.lastName}
+            </div>
+
+            <div
+              className={`text-xs md:text-base text-gray-300 mt-1 md:mt-3 ${user.completed ? "line-through opacity-60" : ""}`}
+            >
+              <p>
+                <span className="font-medium">Email :</span> {user.email}
+              </p>
+              <p>
+                <span className="font-medium">Phone :</span> {user.phone}
+              </p>
+            </div>
+
+            <div className="flex justify-center md:justify-end text-xs md:text-base gap-5 md:gap-3 mt-4 md:mt-3">
+              <button
+                onClick={() => onToggle(user.id)}
+                className={`bg-green-500 rounded shadow shadow-stone-700 active:scale-95 active:shadow-inner px-3 py-1 ${user.completed ? "opacity-60" : ""}`}
+              >
+                Mark
+              </button>
+              <button
+                disabled={user.completed}
+                onClick={() => onEdit(user)}
+                className={`bg-yellow-500 rounded shadow shadow-stone-700 active:scale-95 active:shadow-inner px-3 py-1 ${user.completed ? "opacity-60" : ""}`}
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => onDelete(user.id)}
+                className={`bg-red-600 rounded shadow shadow-stone-700 active:scale-95 active:shadow-inner px-3 py-1 ${user.completed ? "opacity-60" : ""}`}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
